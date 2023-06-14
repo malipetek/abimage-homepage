@@ -1,0 +1,62 @@
+.topnav {
+  display: flex;
+  gap: 1em;
+  margin-right: 2em;
+}
+
+.header-nav-spacing {
+  width: 3em;
+}
+
+.Polaris-Layout__Section {
+  margin-bottom: 5em;
+}
+
+@media (min-width: 48em) {
+.Polaris-Navigation {
+    display: none !important;
+  }
+  .Polaris-Frame--hasNav .Polaris-Frame__Main {
+    padding-left: 0 !important;
+  }  
+}
+
+.pricing-section {
+  .Polaris-HorizontalStack {
+    flex-wrap: nowrap;
+    &>* {
+      flex: 1 1 33%;
+    }
+  }
+  .Polaris-VerticalStack {
+    height: 100%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  background:
+    linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)
+    ),
+    linear-gradient(
+      to right,
+      rgb(255, 255, 255),
+      rgb(0, 94, 120),
+      rgb(255, 255, 255)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
