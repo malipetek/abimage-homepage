@@ -1,6 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,6 +12,20 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-D1W9X7R7F0"
+        strategy="afterInteractive"
+      />
+      <Script
+          id="gtag-init"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-D1W9X7R7F0');`,
+          }}
+        />
       <body className={inter.className}>
         {children}
       </body>
